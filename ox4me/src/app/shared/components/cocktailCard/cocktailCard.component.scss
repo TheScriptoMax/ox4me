@@ -1,5 +1,34 @@
 .card_container{
     background-color: #264729;
-    width: 20rem;
+    width: 100%;
     aspect-ratio: 1/1;
+}
+.card_content_wrapper{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    .card_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h4,p{
+            color: #bedac0;
+        }
+        h4{
+            font-weight: 500;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p{
+            font-weight: 300;
+            font-size: 0.8rem;
+            margin: 0;
+        }
+    }
+    .card_icon{
+        align-self: flex-end;
+        color: #fe251b;
+    }
 }

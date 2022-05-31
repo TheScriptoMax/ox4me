@@ -7,7 +7,6 @@ import { ListComponent } from './pages/list/list.component';
 import { RandomComponent } from './pages/random/random.component';
 import { FavorisComponent } from './pages/favoris/favoris.component';
 import { DailysComponent } from './components/Dailys/Dailys.component';
-import { CocktailCardComponent } from 'src/app/shared/components/cocktailCard/cocktailCard.component';
 
 const routes: Routes = [
   {path:'home',component:CocktailComponent},
@@ -22,8 +21,11 @@ const routes: Routes = [
     CommonModule,
     SharedModule,
     RouterModule.forChild(routes)
+
   ],
   declarations: [
+   
+    //Pages
     CocktailComponent,
     ListComponent,
     RandomComponent,

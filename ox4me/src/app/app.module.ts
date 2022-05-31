@@ -11,20 +11,32 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent
   ],
   imports: [
+    //Core
     BrowserModule,
-    CocktailModule,
     BrowserAnimationsModule,
+    
+    //Sub-modules
+    CocktailModule,
+
+    //Material
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,
     MatIconModule,
+    
+
+
+    //Routing
     AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

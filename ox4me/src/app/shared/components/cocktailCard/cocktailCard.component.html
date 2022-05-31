@@ -1,3 +1,12 @@
-<li class="card_container">
-  cocktailCard works!
+<li *ngIf="cocktailItem" class="card_container">
+  <img src="../../../../assets/img/cocktail_img.jpg" alt="cock">
+  <div class="card_content_wrapper">
+    <div class="card_content">
+      <h4>{{cocktailItem.name}}</h4>
+      <p>{{cocktailItem.category}}</p>
+    </div>
+    <div class="card_icon">
+      <mat-icon>favorite</mat-icon>
+    </div>
+  </div>
 </li>card_container

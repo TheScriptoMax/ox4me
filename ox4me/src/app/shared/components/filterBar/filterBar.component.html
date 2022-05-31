@@ -1,0 +1,18 @@
+<div class="filterBar-container">
+  <form class="filterForm-container">
+    <!-- handle le changement -->
+    <select name="flavorsPicker"  class="flavorSelect" [(ngModel)]="flavor" required >
+      <option value="null" disabled>Pick a flavor</option>
+      <option *ngFor="let flavor of flavors" [value]="flavor" class="flavorOption">
+        {{flavor}}
+      </option>
+    </select>
+    <!-- div avec un label avant et après le slide -->
+    <div class="toggleSlideContainer">
+      <label for="toggleSlide">Oxriginal</label>
+      <mat-slide-toggle class="toggleSlide" name="toggleSlide" id="toggleSlide" [(ngModel)]="toggleSlide" >Classic</mat-slide-toggle>
+    </div>
+    <mat-checkbox name="favoriteCheckbox"class="favCheckbox" [(ngModel)]="favCheck" >Favorite only</mat-checkbox>
+    <button type="submit" class="filterButton" (click)="handleSubmit($event)">{{buttonName}}</button>
+  </form>
+</div>

@@ -1,6 +1,5 @@
 <h3 class="dailys_title">Cocktails du jour</h3>
 <div class="dailys_separator"></div>
-<div class="daily_container">
-  <app-cocktailCard></app-cocktailCard>
-
-</div>
+<ul class="daily_container">
+  <app-cocktailCard *ngFor="let cocktail of cocktails | slice:0:3" [cocktail]="cocktail"></app-cocktailCard> 
+</ul>
