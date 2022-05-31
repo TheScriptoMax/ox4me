@@ -8,11 +8,17 @@
       </option>
     </select>
     <!-- div avec un label avant et après le slide -->
-    <div class="toggleSlideContainer">
+    <!-- <div class="toggleSlideContainer">
       <label for="toggleSlide">Oxriginal</label>
       <mat-slide-toggle class="toggleSlide" name="toggleSlide" id="toggleSlide" [(ngModel)]="toggleSlide" >Classic</mat-slide-toggle>
-    </div>
-    <mat-checkbox name="favoriteCheckbox"class="favCheckbox" [(ngModel)]="favCheck" >Favorite only</mat-checkbox>
+    </div> -->
+    <select name="categoryPicker"  class="catSelect" [(ngModel)]="category" required >
+      <option value="All" >All</option>
+      <option *ngFor="let category of categories" [value]="category" class="catOption">
+        {{category}}
+      </option>
+    </select>
+    <mat-checkbox *ngIf="fav" name="favoriteCheckbox"class="favCheckbox" [(ngModel)]="favCheck" >Favorite only</mat-checkbox>
     <button type="submit" class="filterButton" (click)="handleSubmit($event)">{{buttonName}}</button>
   </form>
 </div>

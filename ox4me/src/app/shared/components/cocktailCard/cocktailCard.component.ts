@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cocktail } from 'src/app/core/models/cocktail.model';
 
 @Component({
@@ -12,7 +13,7 @@ export class CocktailCardComponent implements OnInit {
 
   @Input() cocktail:Cocktail|undefined;
 
-  constructor() { 
+  constructor(private router:Router) { 
     
   }
 
@@ -20,4 +21,7 @@ export class CocktailCardComponent implements OnInit {
     this.cocktailItem=this.cocktail
   }
 
+  goToCocktail(cocktail:Cocktail):void{
+    this.router.navigate(['cocktail',cocktail.id])
+  }
 }

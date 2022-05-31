@@ -16,16 +16,16 @@
     background-color: #264729;
 }
 
-.flavorSelect{
+.flavorSelect,.catSelect{
     padding: 0.4rem 2rem;
-    /* border: none; */
+    border: none;
     border-radius: 0.2rem;
     background-color:#bedac0 ;
     font-size: 1rem;
     font-weight: 700;
     text-align: left;
 }
-.flavorOption{
+.flavorOption,.catOption{
     font-weight: 700;
     text-align: left;
 }
@@ -38,7 +38,7 @@
     font-weight: 700;
     color:#bedac0 ;
 }
-.toggleSlideContainer{
+/* .toggleSlideContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,7 +49,7 @@
     .toggleSlide{
         color: #bedac0;
     }
-}
+} */
 .favCheckbox{
     color: #bedac0;
 }

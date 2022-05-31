@@ -1,4 +1,4 @@
-<li *ngIf="cocktailItem" class="card_container">
+<li *ngIf="cocktailItem" class="card_container" (click)="goToCocktail(cocktailItem)">
   <img src="../../../../assets/img/cocktail_img.jpg" alt="cock">
   <div class="card_content_wrapper">
     <div class="card_content">

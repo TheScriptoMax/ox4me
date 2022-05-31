@@ -12,9 +12,12 @@ export class FilterBarComponent implements OnInit {
   flavors:string[] = []
   flavor:string|null=null;
   favCheck:boolean=false
-  toggleSlide:boolean = false
+  categories:string[] = []
+  category:string="All";
 
   @Input() buttonName:string="" 
+  @Input() fav:boolean=true 
+
   constructor(private cocktailService:CocktailService) { 
 
 
@@ -22,15 +25,18 @@ export class FilterBarComponent implements OnInit {
 
   ngOnInit() {
     this.flavors = this.cocktailService.getCocktailFlavors()
+    this.categories=this.cocktailService.getCocktailCategories()
   }
 
 
   handleSubmit(event:MouseEvent):void{
+    event.preventDefault()
     const filterOption:Filter={
-      category:this.toggleSlide?"homemade":"classic",
+      category:this.category,
       flavor:this.flavor,
       favorite:this.favCheck
     }
+    console.log(filterOption)
   }
 
 }

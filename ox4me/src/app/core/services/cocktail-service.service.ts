@@ -28,7 +28,14 @@ export class CocktailService {
     "Spicey",
     "Creamy",
     "Sweet"
-  ]
+    ]
+  }
+
+  getCocktailCategories():string[]{
+    return [
+      "Homemade",
+      "Classic"
+    ]
   }
 
   // Get Random Cocktail

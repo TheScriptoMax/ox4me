@@ -8,8 +8,8 @@
     * []getcocktailFlavor
     * []getcocktailIngredients
 
-* [] Random Comp button 
-* [] Detail Cocktail Page 
+* [x] Random Comp button 
+* [x] Detail Cocktail Page 
 * [] List Cocktail Page 
 * [] favoris Cocktail Page 
 * [] Search Result

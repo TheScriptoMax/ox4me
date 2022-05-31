@@ -1,0 +1,24 @@
+
+<div *ngIf="cocktail" class="detail-container">
+  <div>
+    <h2>{{cocktail.name}}</h2>
+    <div></div>
+    <div>
+      <p>{{cocktail.category}}</p>
+      <mat-icon>favorite</mat-icon>
+    </div>
+    <img src="../../../../../assets/img/cocktail_img.jpg" alt="cocktail">
+  </div>
+  <div>
+    <div>
+      <div>
+        <h3>Ingrédients</h3>
+        <mat-icon>local_bar</mat-icon>
+        <div></div>
+      </div>
+      <ul>
+        <li *ngFor="let ingredient of cocktail.ingredients">{{ingredient.name}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
